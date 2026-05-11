@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVerse | About Us</title>
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        :root {
+            --glass: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+
+
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            width: 100%;
+            height: 80px;
+            padding: 0 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            backdrop-filter: blur(14px);
+            background: rgba(0, 0, 0, 0.2);
+
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 2px;
+            background: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links .active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-btn,
+        .user-profile-link {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+
+            background: var(--glass);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+            color: var(--text-main);
+
+            transition: 0.3s;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .theme-btn:hover,
+        .user-profile-link:hover {
+            transform: translateY(-2px);
+            color: var(--primary-color);
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 55vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            padding: 80px 7%;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.18);
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* ================= MAIN ================= */
+
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 100px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 45px;
+            backdrop-filter: blur(14px);
+
+            transition: 0.3s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 18px rgba(0, 255, 255, 0.04);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60%;
+            height: 4px;
+            border-radius: 20px;
+            background: var(--primary-color);
+        }
+
+        .vibrant-text {
+            color: var(--text-main);
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+
+        /* ================= TABLE ================= */
+
+        .team-table {
+            width: 100%;
+            margin-top: 40px;
+            border-collapse: collapse;
+            overflow: hidden;
+
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+
+            border-radius: 22px;
+            backdrop-filter: blur(14px);
+        }
+
+        .team-table thead {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .team-table th {
+            padding: 20px;
+            text-align: left;
+
+            color: var(--primary-color);
+
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .team-table td {
+            padding: 18px 20px;
+
+            color: var(--text-main);
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+            transition: 0.3s;
+        }
+
+        .team-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .team-table tr:hover td {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .team-table th:first-child,
+        .team-table td:first-child {
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            width: 35%;
+        }
+
+        /* ================= GOAL ================= */
+
+        .goal-box {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .goal-icon {
+            width: 100px;
+            height: 100px;
+
+            border-radius: 25px;
+
+            background: rgba(0, 255, 255, 0.05);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        /* ================= FORM ================= */
+
+        .join-wrapper {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .glass-form {
+            margin-top: 40px;
+
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+
+            border-radius: 25px;
+
+            padding: 40px;
+
+            backdrop-filter: blur(14px);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 16px;
+
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+
+            background: rgba(255, 255, 255, 0.03);
+
+            color: var(--text-main);
+
+            outline: none;
+
+            transition: 0.3s;
+            resize: none;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.08);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+
+            border: none;
+            border-radius: 15px;
+
+            background: var(--primary-color);
+            color: #000;
+
+            font-size: 1rem;
+            font-weight: 800;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 255, 255, 0.1);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            margin-top: 100px;
+            padding: 30px 7%;
+
+            border-top: 1px solid var(--border-color);
+
+            backdrop-filter: blur(10px);
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-content p {
+            color: var(--text-secondary);
+        }
+
+        .footer-content span {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* ================= ANIMATION ================= */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                height: auto;
+                padding: 20px;
+
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 45vh;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .goal-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .glass-card,
+            .glass-form {
+                padding: 30px;
+            }
+
+            .footer-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .team-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <a class="logo" href="../dashboard/home.html">
+            EduVerse
+        </a>
+
+        <div class="nav-links">
+            <a href="../dashboard/home.html">Home</a>
+            <a href="../../Course Page/courses.html">Courses</a>
+            <a href="../resourses/martin.html">Files</a>
+            <a href="../dashboard/AboutUs.html">About Us</a>
+            <a href="../resourses/contactUs.html">Contact Us</a>
+        </div>
+
+        <div class="nav-actions">
+
+            <a href="./profile.html" class="user-profile-link">
+                <i class="ri-user-3-line"></i>
+            </a>
+
+            <button id="ChangeTheme" class="theme-btn">
+                <i class="ri-moon-line"></i>
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Building The Future Of <span>Programming Education</span>
+            </h1>
+
+            <p>
+                EduVerse is more than just a learning platform.
+                We are passionate Computer Science & AI students from Helwan University,
+                building a modern educational experience for the next generation of developers.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- ABOUT -->
+
+        <section>
+
+            <div class="glass-card">
+
+                <h2 class="section-title">About Us</h2>
+
+                <p class="vibrant-text">
+                    We are a team composed of Computer Science and Artificial Intelligence students
+                    from Helwan University with a shared vision and one mission:
+                    making programming education easier, smarter, and more inspiring.
+                    <br><br>
+                    We believe learning should never feel boring or overwhelming.
+                    That's why we focus on building a smooth, modern, and visually engaging experience
+                    that helps students grow confidently in tech.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- TEAM -->
+
+        <section>
+
+            <h2 class="section-title">Our Team</h2>
+
+            <table class="team-table">
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role / Responsible For</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Martin Mishel</td>
+                        <td>Ensuring website standards and overall project direction.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Karim Ezzat</td>
+                        <td>Managing UI/UX design and layout structure.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Kermina Emil</td>
+                        <td>User feedback analysis and support experience.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Marly Riad</td>
+                        <td>Implementing new features and core functionality.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Martin Magdy</td>
+                        <td>Sourcing high quality learning resources.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Karim Atef</td>
+                        <td>Course performance tracking and analytics.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Kerollos Hany</td>
+                        <td>Analyzing and improving course structures.</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- GOAL -->
+
+        <section>
+
+            <div class="glass-card goal-box">
+
+                <div class="goal-icon">
+                    <i class="ri-rocket-2-line"></i>
+                </div>
+
+                <div>
+
+                    <h2 class="section-title">Our Goal</h2>
+
+                    <p class="vibrant-text">
+                        Our goal is to make learning programming accessible for everyone
+                        while delivering high-quality educational materials and a professional learning journey.
+                        <br><br>
+                        We aim to help students build strong problem-solving skills,
+                        confidence, and the mindset needed to succeed in the tech industry.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- JOIN -->
+
+        <section class="join-wrapper">
+
+            <div class="glass-card">
+
+                <h2 class="section-title">Join Us</h2>
+
+                <p class="vibrant-text">
+                    If you believe in our vision and want to contribute to the future
+                    of programming education, we'd love to hear from you.
+                </p>
+
+                <form class="glass-form">
+
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" placeholder="Your first name ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" placeholder="Your last name ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="EduVerse@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desc">Why do you want to join?</label>
+
+                        <textarea id="desc" rows="6"
+                            placeholder="Tell us about yourself and why you want to join EduVerse..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Submit Application
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <p>
+                Designed by <span>KM</span> © 2026 EduVerse.
+            </p>
+
+            <div class="footer-links">
+                <a href="../dashboard/home.html">Home</a>
+                <a href="../../Course Page/courses.html">Courses</a>
+                <a href="../resourses/martin.html">Files</a>
+                <a href="../dashboard/AboutUs.html">About Us</a>
+                <a href="../resourses/contactUs.html">Contact Us</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ================= JS ================= -->
+
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

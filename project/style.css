@@ -1,0 +1,287 @@
+/* ========= BODY ========= */
+
+body {
+    padding-top: 75px; 
+}
+
+/* ========= NAVBAR & NAVIGATION ========= */
+
+.navbar {
+    width: 100%;
+     padding: 0 7%;
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(14px);
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+/* ========= LOGO ========= */
+
+.logo {
+    font-family: 'Cairo', sans-serif;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+/* ========= NAV LINKS (CENTER) ========= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+        .nav-links a:hover::after
+         {
+            
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 2px;
+            background: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-btn,
+        .user-profile-link {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+
+            background: var(--glass);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+            color: var(--text-main);
+
+            transition: 0.3s;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .theme-btn:hover,
+        .user-profile-link:hover {
+            transform: translateY(-2px);
+            color: var(--primary-color);
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+        }
+        .nav-links a:hover::after,
+        .nav-links .active::after {
+            width: 100%;
+        }
+
+/* =========================
+   ICON BUTTONS
+========================= */
+
+
+.logout-btn{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    border-radius: 12px;
+    border: 1px solid #222;
+
+    background: #111;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.logout-btn:hover{
+    background: #1b1b1b;
+    border-color: #00ff99;
+} 
+
+/* =========================
+   ICONS
+========================= */
+/* ========= ICONS ========= */
+
+.theme-btn i,
+.user-profile-link i {        
+    font-size: 20px;          
+}
+
+/* =========================
+   PROFILE LINK
+========================= */
+
+.user-profile-link{
+    text-decoration: none;
+}
+/* CARD */
+.glass-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+/* PROFILE HEADER */
+.profile-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+} 
+
+/* FORM */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 8px;
+    outline: none;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* LIST */
+.list-card {
+    background: rgba(255,255,255,0.02);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 12px;
+    margin: 5px 5px 0 0;
+    color: var(--text-muted);
+}
+
+.section-title {
+    margin-top: 20px;
+    color: var(--primary-color);
+}
+
+.small {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.input-group
+{
+    position: relative;
+    width: 100%;
+}
+
+.input-group input{
+    width: 100%;
+    padding: 14px 45px 14px 15px;
+}
+
+.input-group i{
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#saveChange
+{
+    margin-top: 20px;
+    width: 100%;
+}
+#logoutBtn
+{
+    gap: 8px;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+}

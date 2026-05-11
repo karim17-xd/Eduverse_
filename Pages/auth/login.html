@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>EduVerse - Login</title>
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <style>
+    /* style el border lma ykon feh error */
+    .input-error {
+      border: 1.5px solid var(--error) !important;
+      box-shadow: 0 0 8px rgba(255, 77, 77, 0.1);
+    }
+
+    /* style el kelma elly btzhar ta7t el input */
+    .error-text {
+      color: var(--error);
+      font-size: 0.75rem;
+      margin-top: 5px;
+      display: none;
+      /* masfeya f el awal */
+      text-align: left;
+      width: 100%;
+      padding-left: 5px;
+    }
+
+    /* tazbet el input box 3shan el error maybozsh el layout */
+    .input-box {
+      margin-bottom: 15px !important;
+      /* zawedna el margin leh lwa7doh */
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main-container">
+    <section class="hero-section">
+      <div class="status-badge">
+        <span class="dot"></span> WELCOME BACK STUDENT
+      </div>
+      <h1>Continue<span>.</span><br>Learning</h1>
+      <p class="description">
+        Access your personalized academic dashboard, track your progress, and connect with your peers.
+      </p>
+
+      <div class="social-links">
+        <button id="ChangeTheme"> Change Theme ?</button>
+        <div class="icons">
+          <a href="https://github.com/karimxd313-bit" target="_blank"><i class="ri-github-fill"></i></a>
+          <a href="https://www.linkedin.com/in/karim-ezzat" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+          <a href="https://x.com/karimezzat55671" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="content">
+        <form id="loginForm" onsubmit="event.preventDefault(); login();">
+          <h2>Log in</h2>
+
+          <div class="input-box">
+            <div style="position: relative; width: 100%;">
+              <input type="text" id="loginUsername" class="form-input" placeholder="Username" required />
+              <i class="ri-user-3-line"></i>
+            </div>
+            <span class="error-text" id="loginUsername-error">Username is required!</span>
+          </div>
+
+          <div class="input-box">
+            <div style="position: relative; width: 100%;">
+              <input type="password" id="loginPassword" class="form-input" placeholder="Password" required />
+              <i class="ri-eye-off-line" onclick="togglePass('loginPassword', this)" style="cursor: pointer;"></i>
+            </div>
+            <span class="error-text" id="loginPassword-error">Password is required!</span>
+          </div>
+
+          <div class="remember"
+            style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 20px; color: var(--text-muted);">
+            <label><input type="checkbox" style="accent-color: var(--primary-color); margin-right: 5px;"> Remember
+              me</label>
+            <a href="mailto:karimxd313@gmail.com" target="_blank"
+              style="color: var(--primary-color); text-decoration: none; cursor: pointer; display: inline-block;">
+              Forgot Password?
+            </a>
+          </div>
+
+          <button type="submit" class="btnn">Log in</button>
+          <p class="footer-text">Don't have an account? <a href="../auth/signUp.html">Sign Up</a></p>
+          <p id="message" style="text-align: center; margin-top: 15px;"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/theme.js"></script>
+  <script src="../../js/auth.js"></script>
+
+</body>
+
+</html>

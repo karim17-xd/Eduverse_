@@ -1,0 +1,116 @@
+
+.navbar {
+    height: 60px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-dark);
+}
+.logo { color: var(--accent-green); font-weight: 700; font-size: 20px; }
+.nav-links { display: flex; gap: 20px; }
+.nav-links a { color: var(--accent-green); font-size: 14px; transition: 0.3s; }
+.nav-links a:hover{color: var(--accent-green);}, .nav-links a.active { color: var(--accent-green); }
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+    padding: 20px 40px;
+    flex: 1;
+    overflow: hidden;
+}
+.main-content { overflow-y: auto; display: flex; flex-direction: column; gap: 20px; padding-right: 10px; }
+
+
+.video-box { position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; background: #000; border: 1px solid var(--border-color); }
+.video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: 5; display: flex; align-items: center; justify-content: center; }
+.play-btn { background: var(--accent-green); width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 0 20px rgba(0, 255, 136, 0.4); }
+
+.lesson-header { background: var(--card-bg); border-radius: 12px; padding: 25px; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border-color); }
+.btn-practice { background: var(--accent-green); color: #000; padding: 12px 24px; border-radius: 8px; font-weight: 700; transition: 0.3s; }
+ 
+
+.tabs-card { background: var(--card-bg); border-radius: 12px; padding: 25px; border: 1px solid var(--border-color); }
+.tabs-nav { display: flex; gap: 30px; border-bottom: 1px solid var(--border-color); margin-bottom: 20px; }
+.tab-item { padding-bottom: 10px; color: var(--text-dim); cursor: pointer; font-size: 14px; font-weight: 600; }
+.tab-item.active { color: var(--accent-green); border-bottom: 2px solid var(--accent-green); }
+
+.sidebar { background: var(--card-bg); border-radius: 12px; border: 1px solid var(--border-color); display: flex; flex-direction: column; overflow: hidden; }
+.syllabus-body { padding: 20px; flex: 1; overflow-y: auto; }
+.progress-bar { background: #2d333b; height: 6px; border-radius: 10px; margin-top: 10px; overflow: hidden; }
+.progress-fill { background: var(--accent-green); height: 100%; }
+
+.lesson-row { display: flex; align-items: center; gap: 15px; padding: 12px; border-radius: 8px; margin-bottom: 8px; cursor: pointer; border: 1px solid transparent; }
+.lesson-row.active { background: rgba(0, 255, 136, 0.05); border-color: var(--accent-green); }
+.status-icon { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--text-dim); display: flex; align-items: center; justify-content: center; font-size: 10px; }
+ 
+
+
+
+.nav-right {
+  display: flex;
+  align-items: center; 
+  gap: 15px;           
+}
+
+
+.theme-switch {
+  width: 50px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease;
+}
+
+
+.switch-ball {
+  width: 20px;
+  height: 20px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); 
+  left: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.theme-switch.active {
+  background: var(--accent-green);
+}
+.theme-switch.active .switch-ball {
+  left: 25px;
+  background: #000;
+}
+
+
+.profile-circle {
+  width: 38px;
+  height: 38px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+  
+  
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profile-circle:hover {
+  border-color: #fff;
+}

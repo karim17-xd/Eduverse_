@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- <link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css"> -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>EduVerse - Course details</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/kero.css">
+    <!-- remix icon aw3aaaa 7d wyms7 deeee -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <a class="logo" href="../dashboard/home.html">EduVerse</a>
+
+        <div class="nav-links">
+            <a href="../dashboard/home.html">Home</a>
+            <a href="../../Course Page/courses.html">Courses</a>
+            <a href="../resourses/martin.html">Files</a>
+            <a href="../resourses/contactUs.html">Contact US</a>
+
+        </div>
+
+        <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+            <a href="../dashboard/profile.html" class="user-profile-link">
+                <i class="ri-user-3-line"></i>
+            </a>
+
+            <button id="ChangeTheme" class="theme-btn">
+                <i class="ri-moon-line"></i>
+            </button>
+        </div>
+
+    </nav>
+
+    <!-- MAIN -->
+
+    <div class="container">
+
+        <!-- LEFT -->
+
+        <div class="main-content">
+
+            <!-- VIDEO -->
+
+            <div class="video-box">
+
+                <div id="videoCover" class="video-overlay"
+                    style="background-image:url('https://img.youtube.com/vi/rfscVS0vtbw/maxresdefault.jpg')">
+
+                    <div class="play-btn" onclick="startVideo()">
+
+                        ▶
+
+                    </div>
+
+                </div>
+
+                <iframe id="videoIframe" src="" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <!-- HEADER -->
+
+            <div class="lesson-header">
+
+                <div>
+
+                    <h1 id="mainTitle">
+                        C++ Full Course
+                    </h1>
+
+                    <p id="lessonMeta">
+                        Programming • C++
+                    </p>
+
+                </div>
+
+                <a id="courseBtn" href="https://youtu.be/rfscVS0vtbw" target="_blank" class="btn-practice">
+
+                    Watch Full Course
+
+                </a>
+
+            </div>
+
+            <!-- TABS -->
+
+            <div class="tabs-card">
+
+                <div class="tabs-nav">
+
+                    <div class="tab-item active">
+                        Resources
+                    </div>
+
+                </div>
+
+                <div id="tabContent">
+
+                    <h4 style="margin-bottom:10px">
+                        Learning Resources
+                    </h4>
+
+                    <ul id="resourcesList" style="
+                        color: var(--text-dim);
+                        margin-left:20px;
+                        line-height:2;
+                    ">
+
+                        <li>
+                            <a href="https://cplusplus.com/" target="_blank">
+
+                                C++ Documentation
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.learncpp.com/" target="_blank">
+
+                                Learn C++
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="syllabus-body">
+
+                <!-- C++ -->
+
+                <div class="lesson-row active" onclick="changeLesson('cpp', this)">
+
+                    <div class="status-icon">1</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>C++</h4>
+
+                        <p>Programming Basics</p>
+
+                    </div>
+
+                </div>
+
+                <!-- JAVA -->
+
+                <div class="lesson-row" onclick="changeLesson('java', this)">
+
+                    <div class="status-icon">2</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>Java</h4>
+
+                        <p>Object Oriented Programming</p>
+
+                    </div>
+
+                </div>
+
+                <!-- PYTHON -->
+
+                <div class="lesson-row" onclick="changeLesson('python', this)">
+
+                    <div class="status-icon">3</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>Python</h4>
+
+                        <p>Python Development</p>
+
+                    </div>
+
+                </div>
+
+                <!-- FRONTEND -->
+
+                <div class="lesson-row" onclick="changeLesson('frontend', this)">
+
+                    <div class="status-icon">4</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>Front End</h4>
+
+                        <p>HTML CSS JavaScript</p>
+
+                    </div>
+
+                </div>
+
+                <!-- BACKEND -->
+
+                <div class="lesson-row" onclick="changeLesson('backend', this)">
+
+                    <div class="status-icon">5</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>Back End</h4>
+
+                        <p>NodeJS & Databases</p>
+
+                    </div>
+
+                </div>
+
+                <!-- FULLSTACK -->
+
+                <div class="lesson-row" onclick="changeLesson('fullstack', this)">
+
+                    <div class="status-icon">6</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>Full Stack</h4>
+
+                        <p>Frontend + Backend</p>
+
+                    </div>
+
+                </div>
+
+                <!-- UI -->
+
+                <div class="lesson-row" onclick="changeLesson('ui', this)">
+
+                    <div class="status-icon">7</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>UI Advanced</h4>
+
+                        <p>UI / UX Design</p>
+
+                    </div>
+
+                </div>
+
+                <!-- CYBER -->
+
+                <div class="lesson-row" onclick="changeLesson('cyber', this)">
+
+                    <div class="status-icon">8</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>Cyber Security</h4>
+
+                        <p>Ethical Hacking</p>
+
+                    </div>
+
+                </div>
+
+                <!-- ML -->
+
+                <div class="lesson-row" onclick="changeLesson('ml', this)">
+
+                    <div class="status-icon">9</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>Machine Learning</h4>
+
+                        <p>ML Fundamentals</p>
+
+                    </div>
+
+                </div>
+
+                <!-- DATABASE -->
+
+                <div class="lesson-row" onclick="changeLesson('database', this)">
+
+                    <div class="status-icon">10</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>Database</h4>
+
+                        <p>SQL & DBMS</p>
+
+                    </div>
+
+                </div>
+
+                <!-- CLOUD -->
+
+                <div class="lesson-row" onclick="changeLesson('cloud', this)">
+
+                    <div class="status-icon">11</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>Cloud</h4>
+
+                        <p>AWS Basics</p>
+
+                    </div>
+
+                </div>
+
+                <!-- AI -->
+
+                <div class="lesson-row" onclick="changeLesson('ai', this)">
+
+                    <div class="status-icon">12</div>
+
+                    <div class="lesson-txt">
+
+                        <h4>AI Engineering</h4>
+
+                        <p>Artificial Intelligence</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/kero.js"></script>
+
+</body>
+<footer class="mainFooter">
+    <div class="container">
+        <div class="design">
+            <p> Designed by <span>KM</span> © 2026 EduVerse.</p>
+        </div>
+
+        <div class="footerLinks">
+            <a href="../dashboard/home.html">Home</a>
+            <a href="../../Course Page/courses.html">Courses</a>
+            <a href="../resourses/martin.html">Files</a>
+            <a href="../resourses/contactUs.html">Contact US</a>
+        </div>
+    </div>
+</footer>
+
+</html>

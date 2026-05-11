@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVerse</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/kermena.css">
+    <!-- remix icon aw3aaaa 7d wyms7 deeee -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+
+<body>
+
+
+    <div class="wrapper">
+        <nav>
+            <a class="logo" href="../dashboard/home.html">EduVerse</a>
+
+            <div class="nav-links">
+                <a href="../dashboard/home.html">Home</a>
+                <a href="../../Course Page/courses.html">Courses</a>
+                <a href="../resourses/martin.html">Files</a>
+                <a href="../dashboard/AboutUs.html">About Us</a>
+                <a href="../resourses/contactUs.html">Contact US</a>
+
+            </div>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <a href="../dashboard/profile.html" class="user-profile-link">
+                    <i class="ri-user-3-line"></i>
+                </a>
+
+                <button id="ChangeTheme" class="theme-btn">
+                    <i class="ri-moon-line"></i>
+                </button>
+            </div>
+
+        </nav>
+
+        <section class="intro">
+            <div class="intro-text">
+                <h1><span>Now</span> you can enroll your courses, <span>let's go!!</span></h1>
+                <p>Start your journey and enroll in our advanced courses.</p>
+            </div>
+        </section>
+
+        <div class="images">
+            <div class="image">
+                <img src="../../imgs/AIeng.jpg" alt="ai">
+            </div>
+
+            <div class="text">
+                <h1>AI Engineering</h1>
+
+                <p>
+
+                    Teaches you how to build and develop advanced artificial intelligence systems and work as a
+                    professional AI Engineer.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="images">
+            <div class="image">
+                <img src="../../imgs/fullstack.jpg" alt="Full Stack Developer">
+            </div>
+
+            <div class="text">
+                <h1>Full Stack Developer</h1>
+
+                <p>
+
+                    Teaches you how to build complete websites from start to finish, covering Front-End, Back-End, and
+                    Database development.
+                </p>
+            </div>
+        </div>
+
+        <div class="images">
+            <div class="image">
+                <img src="../../imgs/ML.jpg" alt=" Machine Learning">
+            </div>
+
+            <div class="text">
+                <h1> Machine Learning</h1>
+
+                <p>
+
+                    Teaches you how to make computers learn from data on their own and make decisions without being
+                    explicitly programmed step by step.
+                </p>
+            </div>
+        </div>
+        <style>
+            /* zoom stats section */
+            .zoom-stats {
+                display: flex;
+                justify-content: space-around;
+                padding: 50px 20px;
+                text-align: center;
+                border-bottom: 1px solid var(--border-color);
+                margin: 20px 0;
+            }
+
+            .zoom-stat-item {
+                flex: 1;
+                position: relative;
+            }
+
+            /* el khat elly ben el stats */
+            .zoom-stat-item:not(:last-child)::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 20%;
+                height: 60%;
+                width: 1px;
+                background: var(--border-color);
+            }
+
+            .zoom-score {
+                font-size: 2.8rem;
+                font-weight: 700;
+                color: var(--text-main);
+                margin-bottom: 8px;
+            }
+
+            .zoom-stars {
+                font-size: 1.2rem;
+                color: var(--text-main);
+                /* aw ekh-tar lon mo3ayan */
+                margin-bottom: 5px;
+            }
+
+            .zoom-count {
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                margin-bottom: 15px;
+            }
+
+            .zoom-vendor {
+                font-weight: 800;
+                font-size: 1.1rem;
+                color: var(--text-main);
+            }
+
+            /* zoom testimonial section */
+            .zoom-quote-box {
+                max-width: 950px;
+                margin: 60px auto;
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            .zoom-quote-text {
+                font-size: 2.2rem;
+                font-weight: 600;
+                color: #2D8CFF;
+                /* Zoom Blue - momken t-khalih var(--primary-color) lw 3aoz */
+                line-height: 1.3;
+                margin-bottom: 30px;
+            }
+
+            .zoom-author {
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: var(--text-main);
+            }
+
+            .zoom-title {
+                color: var(--text-muted);
+                font-size: 1rem;
+            }
+
+            /* responsive 3shan el mobile */
+            @media (max-width: 768px) {
+                .zoom-stats {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+
+                .zoom-stat-item:not(:last-child)::after {
+                    display: none;
+                }
+
+                .zoom-quote-text {
+                    font-size: 1.6rem;
+                }
+            }
+        </style>
+        </head>
+
+        <body>
+
+            <div class="zoom-container">
+                <div class="zoom-stats">
+                    <div class="zoom-stat-item">
+                        <div class="zoom-score">4.5/5</div>
+                        <div class="zoom-stars">★★★★☆</div>
+                        <div class="zoom-count">out of 7.9k+ reviews</div>
+                        <div class="zoom-vendor">Gartner Peer Insights</div>
+                    </div>
+                    <div class="zoom-stat-item">
+                        <div class="zoom-score">4.6/5</div>
+                        <div class="zoom-stars">★★★★★</div>
+                        <div class="zoom-count">out of 54.9k+ reviews</div>
+                        <div class="zoom-vendor">Students Reviews</div>
+                    </div>
+                    <div class="zoom-stat-item">
+                        <div class="zoom-score">8.5/10</div>
+                        <div class="zoom-stars">★★★★☆</div>
+                        <div class="zoom-count">out of 5.8k+ reviews</div>
+                        <div class="zoom-vendor">TrustRadius</div>
+                    </div>
+                </div>
+
+                <div class="zoom-quote-box">
+                    <h2 class="zoom-quote-text">
+                        "EduVerse is the absolute GOAT! It’s the most powerful platform you’ll deal with, containing
+                        every single thing you need for your educational career."
+                    </h2>
+                    <div class="zoom-author">Karim Ezzat</div>
+                    <div class="zoom-title">Founder</div>
+                </div>
+            </div>
+    </div>
+
+
+    <div class="text1">
+
+    </div>
+    <div class="content-area">
+
+
+        <div class="main">
+            <div class="form-card">
+                <div class="form-title">Your Registration</div>
+                <div class="form-sub">Start your journey with us .</div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" id="firstName">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" id="lastName">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" id="phone">
+                </div>
+
+                <button type="get started" onclick="saveData()">get srarted </button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="../../js/kermena.js"></script>
+</body>
+<footer class="mainFooter">
+    <div class="container">
+        <div class="design">
+            <p> Designed by <span>KM</span> © 2026 EduVerse.</p>
+        </div>
+
+        <div class="footerLinks">
+            <a href="../dashboard/home.html">Home</a>
+            <a href="../../Course Page/courses.html">Courses</a>
+            <a href="../resourses/martin.html">Files</a>
+            <a href="../dashboard/AboutUs.html">About Us</a>
+            <a href="../resourses/contactUs.html">Contact US</a>
+        </div>
+    </div>
+</footer>
+
+<script src="../../js/theme.js"></script>
+<script src="../../js/script.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/kermena.js"></script>
+
+</html>
